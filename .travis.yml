@@ -1,0 +1,21 @@
+
+language: java
+
+jdk:
+  - openjdk8
+
+install:
+ - git remote add original https://github.com/POO1920/practica0401p01Java.git
+ - git fetch original
+ - git checkout original/master .travis.yml
+ - git checkout original/master pom.xml
+ - git checkout tags/original src/test/java/practica0401p01/TestsActividad.java
+ - git checkout tags/original src/test/java/practica0401p01/TestsAsignatura.java
+ - git checkout tags/original src/test/java/practica0401p01/TestsCalificacion.java
+ - git checkout tags/original src/test/java/practica0401p01/TestsConvalidacion.java
+ - git checkout tags/original src/test/java/practica0401p01/TestsEstudiante.java
+ - git checkout tags/original src/test/java/practica0401p01/TestsReconocimiento.java
+
+script:
+ - mvn package
+
