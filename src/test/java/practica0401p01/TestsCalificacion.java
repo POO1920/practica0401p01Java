@@ -33,9 +33,9 @@ public class TestsCalificacion {
 	public void testToString() {
 		Calificacion c = new Calificacion(LocalDate.now(), 7.0);
 		String a1ToString = c.toString();
-		assertTrue("Contiene el texto fecha", a1ToString.contains("Fecha"));
+		assertTrue("Contiene el texto fecha", a1ToString.toLowerCase().contains("fecha"));
 		assertTrue("Contiene la fecha", a1ToString.contains(c.getFecha().toString()));
-		assertTrue("Contiene nota", a1ToString.contains("Nota"));
+		assertTrue("Contiene nota", a1ToString.toLowerCase().contains("nota"));
 		assertTrue("Contiene la nota", a1ToString.contains(""+c.getNota()));		
 		
 	}

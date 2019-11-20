@@ -58,11 +58,11 @@ public class TestsReconocimiento {
 	public void testToString() {
 		Reconocimiento a1 = new Reconocimiento("POO",6,"ingles");
 		String a1ToString = a1.toString();
-		assertTrue("Contiene el texto actividad", a1ToString.contains("Actividad"));
+		assertTrue("Contiene el texto actividad", a1ToString.toLowerCase().contains("actividad"));
 		assertTrue("Contiene el nombre de la actividad", a1ToString.contains(a1.getNombre()));
-		assertTrue("Contiene el texto creditos", a1ToString.contains("Creditos"));
+		assertTrue("Contiene el texto creditos", a1ToString.toLowerCase().contains("créditos"));
 		assertTrue("Contiene los creditos de la actividad", a1ToString.contains(""+a1.getCreditos()));
-		assertTrue("Contiene el coeficiente precio", a1ToString.contains("Coeficiente"));
+		assertTrue("Contiene el coeficiente precio", a1ToString.toLowerCase().contains("coeficiente"));
 		assertTrue("Contiene los creditos de la actividad", a1ToString.contains(""+a1.getCoeficientePrecio()));
 		assertTrue("Contiene la descripcion", a1ToString.contains(a1.getDescripcion()));
 		

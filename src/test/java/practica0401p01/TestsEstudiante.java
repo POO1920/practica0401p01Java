@@ -44,9 +44,9 @@ public class TestsEstudiante {
 	public void testToString() {
 		Estudiante a1 = new Estudiante("peperez",true);
 		String a1ToString = a1.toString();
-		assertTrue("Contiene CUASI", a1ToString.contains("CUASI"));
+		assertTrue("Contiene CUASI", a1ToString.toLowerCase().contains("cuasi"));
 		assertTrue("Contiene la cuasi", a1ToString.contains(a1.getCuasi()));
-		assertTrue("Contiene Pertenece a familia numerosa", a1ToString.contains("Pertenece a familia numerosa"));
+		assertTrue("Contiene Pertenece a familia numerosa", a1ToString.toLowerCase().contains("pertenece a familia numerosa"));
 		assertTrue("Contiene familia numerosa", a1ToString.contains(""+a1.getFamiliaNumerosa()));
 		
 		
